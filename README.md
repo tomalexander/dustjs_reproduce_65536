@@ -6,7 +6,7 @@ To see the output:
 make run
 ```
 
-To get a character count:
+To get a byte count:
 ```
 make count
 ```

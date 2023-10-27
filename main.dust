@@ -1,1 +1,7 @@
-Hello {name}.
+{#foo}
+  {#bar}
+    {#baz}
+      Hello {name|s}.{~n}
+    {/baz}
+  {/bar}
+{/foo}

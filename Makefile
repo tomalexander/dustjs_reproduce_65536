@@ -27,6 +27,10 @@ clean:
 run: build
 > docker run --rm --init --read-only --mount type=tmpfs,destination=/tmp $(IMAGE_NAME)
 
+.PHONY: count
+count: build
+> docker run --rm --init --read-only --mount type=tmpfs,destination=/tmp $(IMAGE_NAME) | wc -c
+
 .PHONY: shell
 shell: build
 > docker run --rm -i -t --init --read-only --mount type=tmpfs,destination=/tmp --entrypoint "" $(IMAGE_NAME) /bin/sh

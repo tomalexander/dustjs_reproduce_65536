@@ -5,11 +5,10 @@ RUN apk --no-cache add npm
 # Install LinkedIn DustJS. Installing it globally before copying in
 # the repo to get this cached in the docker cache so we don't spam npm
 # repos every time we change the docker container.
-RUN npm install -g dustjs-linkedin dustjs-helpers
+RUN npm install -g dustjs-linkedin
 
 FROM install_npm AS tester
 
-#RUN apk --no-cache add bash git npm nodejs
 RUN apk --no-cache add bash npm nodejs
 
 # Create unprivileged user

@@ -1,5 +1,4 @@
-// var dust = require("dustjs-linkedin");
-var dust = require("dustjs-helpers");
+var dust = require("dustjs-linkedin");
 var fs = require("fs");
 
 const argv = process.argv.slice(2);

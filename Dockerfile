@@ -21,8 +21,6 @@ WORKDIR /home/dust/workdir
 RUN chown -R dust:dust /home/dust
 RUN npm link dustjs-linkedin dustjs-helpers
 
-ADD entrypoint.bash /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.bash
 USER dust
 ADD context.json run_dust.js main.dust ./
 ENTRYPOINT ["node", "/home/dust/workdir/run_dust.js", "/home/dust/workdir/context.json", "/home/dust/workdir/main.dust"]
